@@ -1,8 +1,15 @@
+import 'package:deliver/themes/themeProvider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'pages/loginPage.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => Themeprovider(),
+      child: const MyApp(),
+      )
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -11,9 +18,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Loginpage()
+      home: Loginpage(),
+      theme: Provider.of<Themeprovider>(context).themeData
     );
   }
 }
