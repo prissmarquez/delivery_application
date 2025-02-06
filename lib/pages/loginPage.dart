@@ -1,3 +1,4 @@
+import 'package:deliver/components/button.dart';
 import 'package:deliver/components/textField.dart';
 import 'package:flutter/material.dart';
 
@@ -52,9 +53,30 @@ class Loginpage extends StatelessWidget {
             obscureText: true,
             ),
 
+            const SizedBox(height: 20,),
+
             //sign in button
+            Button(
+              onTap: (){}, 
+              text: "Sign In"
+              ),
         
             //not a member? Register now
+
+            const SizedBox(height: 20,),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Not a member? ",
+                ),
+                SizedBox(height: 14,),
+                Text(
+                  "Register now",
+                )
+              ]
+            )
         
           ],
         ),

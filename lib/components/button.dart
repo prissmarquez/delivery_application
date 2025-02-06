@@ -14,12 +14,20 @@ final String text;
     return GestureDetector(
       onTap: onTap,
       child: Container(
+        padding: EdgeInsets.all(23),
+        margin: EdgeInsets.symmetric(horizontal: 30),
         decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.secondary
+          color: Theme.of(context).colorScheme.secondary,
+          borderRadius: BorderRadius.circular(8)
         ),
         child: Center(
           child: Text(
             text,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 18,
+              color: Theme.of(context).colorScheme.inversePrimary
+            )
           ),
         ),
       )
