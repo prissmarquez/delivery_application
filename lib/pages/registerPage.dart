@@ -100,6 +100,10 @@ class _RegisterpageState extends State<Registerpage> {
                   onTap: widget.onTap,
                   child: const Text(
                     "Login now",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      decoration: TextDecoration.underline
+                    ),
                   ),
                 )
               ]
