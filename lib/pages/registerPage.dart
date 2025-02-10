@@ -66,6 +66,8 @@ class _RegisterpageState extends State<Registerpage> {
             obscureText: true,
             ),
 
+            const SizedBox(height: 20,),
+
             //confirmpassword textfield 
             Textfield(
             controller: confirmPasswordController, 
@@ -84,19 +86,20 @@ class _RegisterpageState extends State<Registerpage> {
             
             const SizedBox(height: 20,),
 
-            //already have an accout? Sign in
+            //already have an accout? Login now
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
                   "Already have an accout? ",
                 ),
+
                 const SizedBox(height: 14,),
 
                 GestureDetector(
                   onTap: widget.onTap,
                   child: const Text(
-                    "Sign up",
+                    "Login now",
                   ),
                 )
               ]

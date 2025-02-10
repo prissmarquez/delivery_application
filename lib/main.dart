@@ -1,3 +1,4 @@
+import 'package:deliver/pages/registerPage.dart';
 import 'package:deliver/themes/themeProvider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Loginpage(
+      home: Registerpage(
         onTap: () {
           
         },
