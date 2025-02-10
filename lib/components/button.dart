@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class Button extends StatelessWidget {
 final Function()? onTap;
+
 final String text;
   const Button({
     super.key,
@@ -14,7 +15,7 @@ final String text;
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: EdgeInsets.all(23),
+        padding: EdgeInsets.all(25),
         margin: EdgeInsets.symmetric(horizontal: 30),
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.secondary,
