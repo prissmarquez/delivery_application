@@ -19,8 +19,11 @@ class Mydrawer extends StatelessWidget {
             ),
         ),
 
-        Divider(
-          color: Theme.of(context).colorScheme.secondary,
+        Padding(
+          padding: const EdgeInsets.all(15),
+          child: Divider(
+            color: Theme.of(context).colorScheme.secondary,
+          ),
         )
 
           //home list tile
