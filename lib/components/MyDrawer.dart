@@ -1,3 +1,4 @@
+import 'package:deliver/components/drawerTile.dart';
 import 'package:flutter/material.dart';
 
 class Mydrawer extends StatelessWidget {
@@ -24,10 +25,14 @@ class Mydrawer extends StatelessWidget {
           child: Divider(
             color: Theme.of(context).colorScheme.secondary,
           ),
-        )
+        ),
 
           //home list tile
-
+          Drawertile(
+            icon: Icons.home,
+             text: "H O M E",
+             onTap: () {} ,
+             )
           //settings list tile
 
           //logout list tile
