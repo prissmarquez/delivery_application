@@ -1,3 +1,4 @@
+import 'package:deliver/components/MyDrawer.dart';
 import 'package:flutter/material.dart';
 
 class Homepage extends StatefulWidget {
@@ -16,7 +17,7 @@ class _HomepageState extends State<Homepage> {
         "HomePage"
        ),
       ),
-      drawer: Drawer(),
+      drawer: Mydrawer(),
     );
   }
 }
