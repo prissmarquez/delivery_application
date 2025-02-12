@@ -1,4 +1,5 @@
 import 'package:deliver/components/MyDrawer.dart';
+import 'package:deliver/components/silverAppBar.dart';
 import 'package:flutter/material.dart';
 
 class Homepage extends StatefulWidget {
@@ -13,14 +14,30 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
-      appBar: AppBar(
-       title: Text(
-        "HomePage"
-       ),
-       backgroundColor: Theme.of(context).colorScheme.background,
-      ),
       drawer: Mydrawer(),
-    
+      body: NestedScrollView(
+       headerSliverBuilder: (context, innerBoxIsScrolled) => [
+       sliverappbar(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Divider(
+              indent: 25,
+              endIndent: 25,
+              color: Theme.of(context).colorScheme.secondary
+            ),
+           //my current location 
+
+           //description box
+          ]
+        ),
+        title: Text("Title")
+        )
+      ] ,
+     body: Container(
+        color: Colors.blue,
+      ), 
+    )
     );
   }
 }
