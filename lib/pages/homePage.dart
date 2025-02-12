@@ -12,12 +12,15 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
        title: Text(
         "HomePage"
        ),
+       backgroundColor: Theme.of(context).colorScheme.background,
       ),
       drawer: Mydrawer(),
+    
     );
   }
 }
