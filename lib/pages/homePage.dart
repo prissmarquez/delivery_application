@@ -14,7 +14,7 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
-      drawer: Mydrawer(),
+      drawer: const Mydrawer(),
       body: NestedScrollView(
        headerSliverBuilder: (context, innerBoxIsScrolled) => [
        sliverappbar(
