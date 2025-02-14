@@ -1,4 +1,5 @@
 import 'package:deliver/components/MyDrawer.dart';
+import 'package:deliver/components/myCurrentLocation.dart';
 import 'package:deliver/components/silverAppBar.dart';
 import 'package:flutter/material.dart';
 
@@ -27,8 +28,9 @@ class _HomepageState extends State<Homepage> {
               color: Theme.of(context).colorScheme.secondary
             ),
            //my current location 
-
+           Mycurrentlocation(),
            //description box
+           
           ]
         ),
         title: Text("Title")

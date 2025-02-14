@@ -15,7 +15,7 @@ class sliverappbar extends StatelessWidget {
     return SliverAppBar(
       expandedHeight: 340,
       collapsedHeight: 120,
-      pinned: true,
+      pinned:true,
       floating: false,
       actions: [
         //cart button 
