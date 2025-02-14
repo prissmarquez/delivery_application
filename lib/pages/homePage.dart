@@ -1,4 +1,5 @@
 import 'package:deliver/components/MyDrawer.dart';
+import 'package:deliver/components/descriptionBox.dart';
 import 'package:deliver/components/myCurrentLocation.dart';
 import 'package:deliver/components/silverAppBar.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +20,7 @@ class _HomepageState extends State<Homepage> {
       body: NestedScrollView(
        headerSliverBuilder: (context, innerBoxIsScrolled) => [
        sliverappbar(
+        title: Text("Title"),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
@@ -29,11 +31,11 @@ class _HomepageState extends State<Homepage> {
             ),
            //my current location 
            Mycurrentlocation(),
+
            //description box
-           
+           Descriptionbox(),
           ]
-        ),
-        title: Text("Title")
+        )
         )
       ] ,
      body: Container(
