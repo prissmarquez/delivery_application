@@ -19,6 +19,10 @@ class Tabbar extends StatelessWidget {
 
           //2nd tab
           Tab(icon: Icon(Icons.settings)),
+
+           //3rd tab
+          Tab(icon: Icon(Icons.person)),
+
         ]
         ),
     );

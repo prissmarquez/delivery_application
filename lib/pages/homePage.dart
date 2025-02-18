@@ -21,7 +21,7 @@ with SingleTickerProviderStateMixin{
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 2, vsync: this);
+    _tabController = TabController(length: 3, vsync: this);
   }
 
   @override
@@ -56,10 +56,26 @@ with SingleTickerProviderStateMixin{
         )
         )
       ] ,
-     body: Container(
-        color: Colors.blue,
+
+      //---------------Esto va abajo del tabBar es nuestro body-------------//
+     body: TabBarView(
+      controller: _tabController,
+      children: [
+        ListView.builder(
+          itemCount: 5,
+          itemBuilder: (context,index) => Text("Hello")
+          ),
+        ListView.builder(
+          itemCount: 5,
+          itemBuilder: (context,index) => Text("Hello")
+          ),
+        ListView.builder(
+          itemCount: 5,
+          itemBuilder: (context,index) => Text("Hello")
+          ),
+      ]
+      )
       ), 
-    )
     );
   }
 }
