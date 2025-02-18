@@ -24,7 +24,7 @@ enum IceCreamsCategory{
   fruit,
   cream,
   water,
-  yogurt
+  ice_popsicle,
 }
 
 //addons
