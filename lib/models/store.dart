@@ -1,5 +1,4 @@
 import 'package:deliver/models/iceCreams.dart';
-import 'package:flutter/material.dart';
 
 class Store {
   final List<IceCreams> _menu = [
