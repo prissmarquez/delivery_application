@@ -4,15 +4,15 @@ class IceCreams {
   final String name;
   final double price;
   final String description;
-  final String image;
-  final String category;
-  List<addons> availableAddons;
+  final String imagePath;
+  final IceCreamsCategory category;
+  List<Addons> availableAddons;
 
   IceCreams({
   required this.name,
   required this.price,
   required this.description,
-  required this.image,
+  required this.imagePath,
   required this.availableAddons,
   required this.category
   });
@@ -28,10 +28,10 @@ enum IceCreamsCategory{
 }
 
 //addons
-class addons {
+class Addons {
   final String name;
   final double price;
-  addons({
+  Addons({
     required this.name,
     required this.price,
   });
