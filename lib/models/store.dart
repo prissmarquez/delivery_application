@@ -8,7 +8,7 @@ class Store {
     name: "Almond Bliss", 
     description: "A smooth and creamy almond-flavored ice cream made with fresh milk", 
     price: 4.99, 
-    imagePath:"lib/assets/milk/almond milk.webp" , 
+    imagePath:"lib/assets/milk/almond.webp" , 
     category: IceCreamsCategory.milk,
     availableAddons: [
       Addons(name:"Crushed almonds", price: 0.50), 
@@ -23,7 +23,7 @@ class Store {
     name: "Choco Heaven", 
     description: "Indulge in the richness of our chocolate milk ice cream, crafted with premium cocoa and a velvety texture that melts in your mout", 
     price: 4.99, 
-    imagePath:"lib/assets/milk/chocolate milk.jpg" , 
+    imagePath:"lib/assets/milk/chocolate.jpg" , 
     category: IceCreamsCategory.milk,
     availableAddons: [
       Addons(name:"Chocolate chips", price: 0.50), 
@@ -38,7 +38,7 @@ class Store {
     name: "Coco Delight", 
     description: " A tropical escape in every scoop! Creamy coconut milk ice cream with real coconut flakes for a refreshing and exotic treat.", 
     price: 4.99, 
-    imagePath:"lib/assets/milk/coconut milk.jpeg" , 
+    imagePath:"lib/assets/milk/coconut.jpeg" , 
     category: IceCreamsCategory.milk,
     availableAddons: [
       Addons(name:"Toasted coconut", price: 0.50), 
@@ -53,7 +53,7 @@ class Store {
     name: "Coffee Rush", 
     description: " A bold and aromatic ice cream infused with real coffee, delivering a smooth and energizing experience with every bite.", 
     price: 4.99, 
-    imagePath:"lib/assets/milk/coffee milk.webp" , 
+    imagePath:"lib/assets/milk/coffee.webp" , 
     category: IceCreamsCategory.milk,
     availableAddons: [
       Addons(name:"Espresso shot", price: 1.00), 
@@ -68,7 +68,7 @@ class Store {
     name: "Vanilla Dream", 
     description: " A timeless classic made with fresh milk and pure vanilla bean extract, offering a rich, creamy, and elegant flavor.", 
     price: 4.99, 
-    imagePath:"lib/assets/milk/vainilla milk.jpg" , 
+    imagePath:"lib/assets/milk/vainilla.jpg" , 
     category: IceCreamsCategory.milk,
     availableAddons: [
       Addons(name:"Crushed cookies", price: 0.50), 

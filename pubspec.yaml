@@ -59,18 +59,18 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
+  # To add images to your application, add an images section, like this:
   assets:
-   - lib/assets/cream
-   - lib/assets/fruit
-   - lib/assets/ice_popsicle
-   - lib/assets/milk
-   - lib/assets/water
+   - lib/images/fruit/
+   - lib/images/ice_popsicle/
+   - lib/images/milk/
+   - lib/images/water/
+   - lib/images/cream/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 
-  # For details regarding adding assets from package dependencies, see
+  # For details regarding adding images from package dependencies, see
   # https://flutter.dev/to/asset-from-package
 
   # To add custom fonts to your application, add a fonts section here,
