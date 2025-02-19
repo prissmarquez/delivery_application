@@ -79,6 +79,80 @@ class Store {
     ),
 
     //cream
+    //---------clase que da la informacion del producto------------//
+    IceCreams(
+    name: "Banana Royale", 
+    description: "A rich and velvety banana-flavored ice cream made with real bananas and fresh cream, delivering a naturally sweet and smooth taste.", 
+    price: 5.49, 
+    imagePath:"lib/assets/cream/banana.jpeg" , 
+    category: IceCreamsCategory.cream,
+    availableAddons: [
+      Addons(name:"Sliced bananas", price: 0.75), 
+      Addons(name:"Caramel drizzle", price: 0.50), 
+      Addons(name:"Chopped walnuts", price: 0.75), 
+      Addons(name:"Whipped cream", price: 0.50),
+    ],
+    ),
+
+     //---------clase que da la informacion del producto------------//
+    IceCreams(
+    name: "Golden Caramel Swirl", 
+    description: " Indulge in the buttery richness of caramel-infused cream ice cream with delicate swirls of golden caramel for the ultimate sweet experience.", 
+    price: 5.49, 
+    imagePath:"lib/assets/cream/Caramel.jpg" , 
+    category: IceCreamsCategory.cream,
+    availableAddons: [
+      Addons(name:"Caramelized pecans", price: 0.75), 
+      Addons(name:"Sea salt flakes", price: 0.50), 
+      Addons(name:"Chocolate chips", price: 0.50), 
+      Addons(name:"Extra caramel drizzle", price: 0.50),
+    ],
+    ),
+
+     //---------clase que da la informacion del producto------------//
+    IceCreams(
+    name: "Cookies & Dream", 
+    description: "A creamy vanilla-based ice cream loaded with crunchy chocolate cookie chunks, giving you the perfect balance between smooth and crunchy textures.", 
+    price: 5.49, 
+    imagePath:"lib/assets/cream/Cookies.jpg" , 
+    category: IceCreamsCategory.cream,
+    availableAddons: [
+      Addons(name:"Extra cookie crumbles", price: 0.50), 
+      Addons(name:"Chocolate fudge ", price: 0.75), 
+      Addons(name:"Whipped cream ", price: 0.50), 
+      Addons(name:"White chocolate chips", price: 0.75),
+    ],
+    ),
+
+     //---------clase que da la informacion del producto------------//
+    IceCreams(
+    name: "Minty Bliss", 
+    description: "Refresh your senses with a creamy and cool mint-flavored ice cream blended with chocolate flakes for a deliciously smooth and invigorating treat.", 
+    price: 5.49, 
+    imagePath:"lib/assets/cream/mint.jpg" , 
+    category: IceCreamsCategory.cream,
+    availableAddons: [
+      Addons(name:"Extra chocolate flakes", price: 0.50), 
+      Addons(name:"Crushed peppermint candy ", price: 0.50), 
+      Addons(name:"Dark chocolate drizzle", price: 0.50), 
+      Addons(name:"Whipped cream", price: 0.75),
+    ],
+    ),
+
+     //---------clase que da la informacion del producto------------//
+    IceCreams(
+    name: "Vanilla Supreme", 
+    description: "A luxurious and silky vanilla ice cream made with Madagascar vanilla beans and rich cream, offering a classic and elegant flavor.", 
+    price: 5.49, 
+    imagePath:"lib/assets/cream/vainilla.jpg" , 
+    category: IceCreamsCategory.cream,
+    availableAddons: [
+      Addons(name:"Crushed almond", price: 0.50), 
+      Addons(name:"Caramel drizzle", price: 0.50), 
+      Addons(name:"Fresh berries", price: 0.75), 
+      Addons(name:"Honey drizzle", price: 0.50),
+    ],
+    ),
 
     //fruit 
 
