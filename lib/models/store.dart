@@ -2,7 +2,8 @@ import 'package:deliver/models/iceCreams.dart';
 
 class Store {
   final List<IceCreams> _menu = [
-    //milk
+    //1. milk
+
     //---------clase que da la informacion del producto------------//
     IceCreams(
     name: "Almond Bliss", 
@@ -78,7 +79,8 @@ class Store {
     ],
     ),
 
-    //cream
+    //2. cream
+
     //---------clase que da la informacion del producto------------//
     IceCreams(
     name: "Banana Royale", 
@@ -154,7 +156,37 @@ class Store {
     ],
     ),
 
-    //fruit 
+    //3. fruit 
+
+     //---------clase que da la informacion del producto------------//
+    IceCreams(
+    name: "Apple Sensation", 
+    description: "A refreshing green apple ice cream with a perfect balance of sweetness and tanginess, made with real apple puree for a crisp and fruity delight.", 
+    price: 5.29, 
+    imagePath:"lib/assets/fruit/Apple.jpg" , 
+    category: IceCreamsCategory.fruit,
+    availableAddons: [
+      Addons(name:"Cinnamon sprinkle", price: 0.50), 
+      Addons(name:"Caramel drizzle", price: 0.50), 
+      Addons(name:"Granola crunch", price: 0.75), 
+      Addons(name:"Whipped cream", price: 0.50),
+    ],
+    ),
+
+     //---------clase que da la informacion del producto------------//
+    IceCreams(
+    name: "Kiwi Twist", 
+    description: "A smooth and tropical kiwi-flavored ice cream made with real fruit pulp, delivering a refreshing and slightly tangy burst of flavor.", 
+    price: 5.29, 
+    imagePath:"lib/assets/fruit/Apple.jpg" , 
+    category: IceCreamsCategory.fruit,
+    availableAddons: [
+      Addons(name:"Chia seeds", price: 0.50), 
+      Addons(name:"Fresh kiwi slices ", price: 0.75), 
+      Addons(name:"Honey drizzle", price: 0.50), 
+      Addons(name:"Coconut flakes", price: 0.50),
+    ],
+    ),
 
     //water
 
