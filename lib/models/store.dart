@@ -178,13 +178,58 @@ class Store {
     name: "Kiwi Twist", 
     description: "A smooth and tropical kiwi-flavored ice cream made with real fruit pulp, delivering a refreshing and slightly tangy burst of flavor.", 
     price: 5.29, 
-    imagePath:"lib/assets/fruit/Apple.jpg" , 
+    imagePath:"lib/assets/fruit/kiwi.jpg" , 
     category: IceCreamsCategory.fruit,
     availableAddons: [
       Addons(name:"Chia seeds", price: 0.50), 
       Addons(name:"Fresh kiwi slices ", price: 0.75), 
       Addons(name:"Honey drizzle", price: 0.50), 
       Addons(name:"Coconut flakes", price: 0.50),
+    ],
+    ),
+
+    //---------clase que da la informacion del producto------------//
+    IceCreams(
+    name: "Orange Zest", 
+    description: "A creamy and citrusy delight made with fresh orange juice and zest, offering a vibrant and refreshing taste in every bite.", 
+    price: 5.29, 
+    imagePath:"lib/assets/fruit/Orange.jpg" , 
+    category: IceCreamsCategory.fruit,
+    availableAddons: [
+      Addons(name:"White chocolate drizzle", price: 0.50), 
+      Addons(name:"Candied orange peel", price: 0.75), 
+      Addons(name:"Chopped almonds", price: 0.50), 
+      Addons(name:"Whipped cream", price: 0.50),
+    ],
+    ),
+
+    //---------clase que da la informacion del producto------------//
+    IceCreams(
+    name: "Peach Paradise", 
+    description: "A smooth and luscious peach ice cream infused with real peach chunks, creating a naturally sweet and juicy experience.", 
+    price: 5.29, 
+    imagePath:"lib/assets/fruit/peach.webp" , 
+    category: IceCreamsCategory.fruit,
+    availableAddons: [
+      Addons(name:"Fresh peach slices", price: 0.75), 
+      Addons(name:"Honey drizzle", price: 0.50), 
+      Addons(name:"Toasted coconut", price: 0.50), 
+      Addons(name:"Granola crunch", price: 0.75),
+    ],
+    ),
+
+    //---------clase que da la informacion del producto------------//
+    IceCreams(
+    name: "Berry Bliss", 
+    description: "A rich and creamy strawberry ice cream made with sun-ripened strawberries, offering a naturally sweet and tangy explosion of flavor.", 
+    price: 5.29, 
+    imagePath:"lib/assets/fruit/Strawberry.jpg" , 
+    category: IceCreamsCategory.fruit,
+    availableAddons: [
+      Addons(name:"Fresh strawberries", price: 0.75), 
+      Addons(name:"White chocolate chips", price: 0.50), 
+      Addons(name:"Crushed cookies", price: 0.50), 
+      Addons(name:"Whipped cream", price: 0.50),
     ],
     ),
 
