@@ -233,7 +233,21 @@ class Store {
     ],
     ),
 
-    //water
+    //4. water
+    //---------clase que da la informacion del producto------------//
+    IceCreams(
+    name: "Berry Bliss", 
+    description: "A rich and creamy strawberry ice cream made with sun-ripened strawberries, offering a naturally sweet and tangy explosion of flavor.", 
+    price: 5.29, 
+    imagePath:"lib/assets/fruit/Strawberry.jpg" , 
+    category: IceCreamsCategory.fruit,
+    availableAddons: [
+      Addons(name:"Fresh strawberries", price: 0.75), 
+      Addons(name:"White chocolate chips", price: 0.50), 
+      Addons(name:"Crushed cookies", price: 0.50), 
+      Addons(name:"Whipped cream", price: 0.50),
+    ],
+    ),
 
     //ice popsicles
   ];
