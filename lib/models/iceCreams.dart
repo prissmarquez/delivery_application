@@ -1,4 +1,6 @@
 
+import 'package:flutter/foundation.dart';
+
 class IceCreams {
   final String name;
   final double price;
@@ -19,11 +21,11 @@ class IceCreams {
 
 // categories
 enum IceCreamsCategory{
-  milk,
-  fruit,
-  cream,
-  water,
-  ice_popsicle,
+  Milk,
+  Fruit,
+  Cream,
+  Water,
+  Ice_popsicle,
 }
 
 //addons

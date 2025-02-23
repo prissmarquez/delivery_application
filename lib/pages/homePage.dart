@@ -3,7 +3,11 @@ import 'package:deliver/components/descriptionBox.dart';
 import 'package:deliver/components/myCurrentLocation.dart';
 import 'package:deliver/components/silverAppBar.dart';
 import 'package:deliver/components/tabBar.dart';
+import 'package:deliver/models/iceCreams.dart';
+import 'package:deliver/models/store.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -21,13 +25,36 @@ with SingleTickerProviderStateMixin{
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 3, vsync: this);
+    _tabController = TabController(length: IceCreamsCategory.values.length, vsync: this);
   }
 
   @override
   void dispose() {
     _tabController.dispose();
     super.dispose();
+  }
+
+  // Sort out and return a list of iceCreams items that belong to a specfic category 
+  List<IceCreams>_filterMenuByCategory(IceCreamsCategory category, List<IceCreams> fulMenu){
+    return fulMenu.where((element) => element.category == category).toList();
+  }
+
+  //return list of iceCremas in a given category
+  List<Widget> getFoodInThisCategory(List<IceCreams> fullMenu){
+    return IceCreamsCategory.values.map((category){
+      List<IceCreams> categoryMenu = _filterMenuByCategory(category, fullMenu);
+
+      return ListView.builder(
+        padding:EdgeInsets.zero,
+        itemCount: categoryMenu.length,
+        physics: const NeverScrollableScrollPhysics(),
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text(categoryMenu[index].name),
+          );
+        },
+      );
+    }).toList();
   }
 
   @override
@@ -58,23 +85,11 @@ with SingleTickerProviderStateMixin{
       ] ,
 
       //---------------Esto va abajo del tabBar es nuestro body-------------//
-     body: TabBarView(
+     body: Consumer<Store>(builder: (context, store, child) => TabBarView(
       controller: _tabController,
-      children: [
-        ListView.builder(
-          itemCount: 5,
-          itemBuilder: (context,index) => Text("Hello")
-          ),
-        ListView.builder(
-          itemCount: 5,
-          itemBuilder: (context,index) => Text("Hello")
-          ),
-        ListView.builder(
-          itemCount: 5,
-          itemBuilder: (context,index) => Text("Hello")
-          ),
-      ]
+      children: getFoodInThisCategory(store.menu)
       )
+     )
       ), 
     );
   }
