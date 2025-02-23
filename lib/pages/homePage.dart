@@ -51,6 +51,7 @@ with SingleTickerProviderStateMixin{
         itemBuilder: (context, index) {
           return ListTile(
             title: Text(categoryMenu[index].name),
+            subtitle: Text(categoryMenu[index].price.toString()),
           );
         },
       );
