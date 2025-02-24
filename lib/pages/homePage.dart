@@ -1,6 +1,7 @@
 import 'package:deliver/components/MyDrawer.dart';
 import 'package:deliver/components/descriptionBox.dart';
 import 'package:deliver/components/myCurrentLocation.dart';
+import 'package:deliver/components/myIceCreams_tile.dart';
 import 'package:deliver/components/silverAppBar.dart';
 import 'package:deliver/components/tabBar.dart';
 import 'package:deliver/models/iceCreams.dart';
@@ -41,6 +42,8 @@ with SingleTickerProviderStateMixin{
   //return list of iceCremas in a given category
   List<Widget> getFoodInThisCategory(List<IceCreams> fullMenu){
     return IceCreamsCategory.values.map((category){
+
+      //get Category menu
       List<IceCreams> categoryMenu = _filterMenuByCategory(category, fullMenu);
 
       return ListView.builder(
@@ -48,10 +51,9 @@ with SingleTickerProviderStateMixin{
         itemCount: categoryMenu.length,
         physics: const NeverScrollableScrollPhysics(),
         itemBuilder: (context, index) {
-          return ListTile(
-            title: Text(categoryMenu[index].name),
-            subtitle: Text(categoryMenu[index].price.toString()),
-          );
+          //get individual IceCreams 
+          final iceCreams = categoryMenu[index];
+          return MyicecreamsTile(iceCreams: iceCreams, onTap: (){});
         },
       );
     }).toList();
