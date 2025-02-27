@@ -25,7 +25,9 @@ with SingleTickerProviderStateMixin{
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: IceCreamsCategory.values.length, vsync: this);
+    _tabController = TabController(
+      length: IceCreamsCategory.values.length, 
+      vsync: this);
   }
 
   @override
@@ -36,7 +38,7 @@ with SingleTickerProviderStateMixin{
 
   // Sort out and return a list of iceCreams items that belong to a specfic category 
   List<IceCreams>_filterMenuByCategory(IceCreamsCategory category, List<IceCreams> fulMenu){
-    return fulMenu.where((element) => element.category == category).toList();
+    return fulMenu.where((iceCream) => iceCream.category == category).toList();
   }
 
   //return list of iceCremas in a given category
@@ -56,7 +58,10 @@ with SingleTickerProviderStateMixin{
           final iceCreams = categoryMenu[index];
 
           //return food tile UI
-          return MyicecreamsTile(iceCreams: iceCreams, onTap: (){});
+          return IcecreamsTile(
+            iceCreams: iceCreams, 
+            onTap: (){}
+            );
         },
       );
     }).toList();
@@ -90,7 +95,8 @@ with SingleTickerProviderStateMixin{
       ] ,
 
       //---------------Esto va abajo del tabBar es nuestro body-------------//
-     body: Consumer<Store>(builder: (context, store, child) => TabBarView(
+     body: Consumer<Store>(
+      builder: (context, store, child) => TabBarView(
       controller: _tabController,
       children: getFoodInThisCategory(store.menu)
       )

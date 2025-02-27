@@ -5,10 +5,15 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 void main() {
+ WidgetsFlutterBinding.ensureInitialized();
+
   runApp(
+    //these provider
     MultiProvider(providers: [
+      //theme provider
       ChangeNotifierProvider(create: (context) => Themeprovider()),
 
+      //store
       ChangeNotifierProvider(create: (context) => Store()),
 
     ],

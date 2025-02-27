@@ -9,10 +9,10 @@ class Tabbar extends StatelessWidget {
     required this.tabController,
   });
 
-  List<Tab> _buildCategoriesTabs(){
-    return IceCreamsCategory.values.map((Category) {
+  List<Tab> _buildCategoryTabs(){
+    return IceCreamsCategory.values.map((category) {
       return Tab(
-        text: Category.toString().split(".").last
+        text: category.toString().split(".").last
       );
     }).toList();
   }
@@ -21,7 +21,7 @@ class Tabbar extends StatelessWidget {
     return Container(
       child: TabBar(
         controller: tabController,
-        tabs: _buildCategoriesTabs(),
+        tabs: _buildCategoryTabs(),
         ),
     );
   }
