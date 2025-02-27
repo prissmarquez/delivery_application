@@ -4,7 +4,7 @@ import 'package:deliver/components/myCurrentLocation.dart';
 import 'package:deliver/components/myIceCreams_tile.dart';
 import 'package:deliver/components/silverAppBar.dart';
 import 'package:deliver/components/tabBar.dart';
-import 'package:deliver/models/iceCreams.dart';
+import 'package:deliver/models/iceCreams(food).dart';
 import 'package:deliver/models/store.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -51,8 +51,11 @@ with SingleTickerProviderStateMixin{
         itemCount: categoryMenu.length,
         physics: const NeverScrollableScrollPhysics(),
         itemBuilder: (context, index) {
+
           //get individual IceCreams 
           final iceCreams = categoryMenu[index];
+
+          //return food tile UI
           return MyicecreamsTile(iceCreams: iceCreams, onTap: (){});
         },
       );

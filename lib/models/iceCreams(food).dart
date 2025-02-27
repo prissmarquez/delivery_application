@@ -20,11 +20,11 @@ class IceCreams {
 
 // categories
 enum IceCreamsCategory{
-  Milk,
-  Fruit,
-  Cream,
-  Water,
-  Ice_popsicle,
+  milk,
+  fruit,
+  cream,
+  water,
+  popsicle,
 }
 
 //addons

@@ -15,8 +15,8 @@ final String text;
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: EdgeInsets.all(25),
-        margin: EdgeInsets.symmetric(horizontal: 30),
+        padding: const EdgeInsets.all(25),
+        margin: const EdgeInsets.symmetric(horizontal: 30),
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.secondary,
           borderRadius: BorderRadius.circular(8)
