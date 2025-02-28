@@ -6,6 +6,7 @@ import 'package:deliver/components/silverAppBar.dart';
 import 'package:deliver/components/tabBar.dart';
 import 'package:deliver/models/iceCreams(food).dart';
 import 'package:deliver/models/store.dart';
+import 'package:deliver/pages/iceCreamsPage.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -60,7 +61,7 @@ with SingleTickerProviderStateMixin{
           //return food tile UI
           return IcecreamsTile(
             iceCreams: iceCreams, 
-            onTap: (){}
+            onTap:() =>  Navigator.push (context, MaterialPageRoute(builder: (context) => Icecreamspage(iceCreams: iceCreams))),
             );
         },
       );

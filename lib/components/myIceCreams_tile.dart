@@ -47,11 +47,21 @@ class IcecreamsTile extends StatelessWidget {
                   )
                 
                 ),
+
+                SizedBox(width: 20,),
                 //IceCreams Image 
-                ClipRRect(child: Image.asset(iceCreams.imagePath, height: 100,)),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: Image.asset(iceCreams.imagePath, height: 160, width: 150,)
+                  ),
               ]
             ),
           ),
+        ),
+        Divider(
+          color: Theme.of(context).colorScheme.tertiary,
+          endIndent: 25,
+          indent: 25,
         )
       ],
     );
