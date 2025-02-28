@@ -10,7 +10,7 @@ class Store extends ChangeNotifier {
     name: "Almond Bliss", 
     description: "A smooth and creamy almond-flavored ice cream made with fresh milk", 
     price: 4.99, 
-    imagePath:"lib/assets/milk/almond.webp" , 
+    imagePath:"lib/images/milk/almons.jpg", 
     category: IceCreamsCategory.milk,
     availableAddons: [
       Addons(name:"Crushed almonds", price: 0.50), 
@@ -25,7 +25,7 @@ class Store extends ChangeNotifier {
     name: "Choco Heaven", 
     description: "Indulge in the richness of our chocolate milk ice cream, crafted with premium cocoa and a velvety texture that melts in your mout", 
     price: 4.99, 
-    imagePath:"lib/assets/milk/chocolate.jpg" , 
+    imagePath:"lib/images/milk/chocolate.jpg" , 
     category: IceCreamsCategory.milk,
     availableAddons: [
       Addons(name:"Chocolate chips", price: 0.50), 
@@ -40,7 +40,7 @@ class Store extends ChangeNotifier {
     name: "Coco Delight", 
     description: " A tropical escape in every scoop! Creamy coconut milk ice cream with real coconut flakes for a refreshing and exotic treat.", 
     price: 4.99, 
-    imagePath:"lib/assets/milk/coconut.jpeg" , 
+    imagePath:"lib/images/milk/coconut.jpeg" , 
     category: IceCreamsCategory.milk,
     availableAddons: [
       Addons(name:"Toasted coconut", price: 0.50), 
@@ -55,7 +55,7 @@ class Store extends ChangeNotifier {
     name: "Coffee Rush", 
     description: " A bold and aromatic ice cream infused with real coffee, delivering a smooth and energizing experience with every bite.", 
     price: 4.99, 
-    imagePath:"lib/assets/milk/coffee.webp" , 
+    imagePath:"lib/images/milk/coffee.webp" , 
     category: IceCreamsCategory.milk,
     availableAddons: [
       Addons(name:"Espresso shot", price: 1.00), 
@@ -70,7 +70,7 @@ class Store extends ChangeNotifier {
     name: "Vanilla Dream", 
     description: " A timeless classic made with fresh milk and pure vanilla bean extract, offering a rich, creamy, and elegant flavor.", 
     price: 4.99, 
-    imagePath:"lib/assets/milk/vainilla.jpg" , 
+    imagePath:"lib/images/milk/vainilla.jpg" , 
     category: IceCreamsCategory.milk,
     availableAddons: [
       Addons(name:"Crushed cookies", price: 0.50), 
@@ -87,7 +87,7 @@ class Store extends ChangeNotifier {
     name: "Banana Royale", 
     description: "A rich and velvety banana-flavored ice cream made with real bananas and fresh cream, delivering a naturally sweet and smooth taste.", 
     price: 5.49, 
-    imagePath:"lib/assets/cream/banana.jpeg" , 
+    imagePath:"lib/images/cream/banana.jpeg" , 
     category: IceCreamsCategory.cream,
     availableAddons: [
       Addons(name:"Sliced bananas", price: 0.75), 
@@ -102,7 +102,7 @@ class Store extends ChangeNotifier {
     name: "Golden Caramel Swirl", 
     description: " Indulge in the buttery richness of caramel-infused cream ice cream with delicate swirls of golden caramel for the ultimate sweet experience.", 
     price: 5.49, 
-    imagePath:"lib/assets/cream/Caramel.jpg" , 
+    imagePath:"lib/images/cream/Caramel.jpg" , 
     category: IceCreamsCategory.cream,
     availableAddons: [
       Addons(name:"Caramelized pecans", price: 0.75), 
@@ -117,7 +117,7 @@ class Store extends ChangeNotifier {
     name: "Cookies & Dream", 
     description: "A creamy vanilla-based ice cream loaded with crunchy chocolate cookie chunks, giving you the perfect balance between smooth and crunchy textures.", 
     price: 5.49, 
-    imagePath:"lib/assets/cream/Cookies.jpg" , 
+    imagePath:"lib/images/cream/Cookies.jpg" , 
     category: IceCreamsCategory.cream,
     availableAddons: [
       Addons(name:"Extra cookie crumbles", price: 0.50), 
@@ -132,7 +132,7 @@ class Store extends ChangeNotifier {
     name: "Minty Bliss", 
     description: "Refresh your senses with a creamy and cool mint-flavored ice cream blended with chocolate flakes for a deliciously smooth and invigorating treat.", 
     price: 5.49, 
-    imagePath:"lib/assets/cream/mint.jpg" , 
+    imagePath:"lib/images/cream/mint.jpg" , 
     category: IceCreamsCategory.cream,
     availableAddons: [
       Addons(name:"Extra chocolate flakes", price: 0.50), 
@@ -147,7 +147,7 @@ class Store extends ChangeNotifier {
     name: "Vanilla Supreme", 
     description: "A luxurious and silky vanilla ice cream made with Madagascar vanilla beans and rich cream, offering a classic and elegant flavor.", 
     price: 5.49, 
-    imagePath:"lib/assets/cream/vainilla.jpg" , 
+    imagePath:"lib/images/cream/vainilla.jpg" , 
     category: IceCreamsCategory.cream,
     availableAddons: [
       Addons(name:"Crushed almond", price: 0.50), 
@@ -164,7 +164,7 @@ class Store extends ChangeNotifier {
     name: "Apple Sensation", 
     description: "A refreshing green apple ice cream with a perfect balance of sweetness and tanginess, made with real apple puree for a crisp and fruity delight.", 
     price: 5.29, 
-    imagePath:"lib/assets/fruit/Apple.jpg" , 
+    imagePath:"lib/images/fruit/Apple.jpg" , 
     category: IceCreamsCategory.fruit,
     availableAddons: [
       Addons(name:"Cinnamon sprinkle", price: 0.50), 
@@ -179,7 +179,7 @@ class Store extends ChangeNotifier {
     name: "Kiwi Twist", 
     description: "A smooth and tropical kiwi-flavored ice cream made with real fruit pulp, delivering a refreshing and slightly tangy burst of flavor.", 
     price: 5.29, 
-    imagePath:"lib/assets/fruit/kiwi.jpg" , 
+    imagePath:"lib/images/fruit/kiwi.jpg" , 
     category: IceCreamsCategory.fruit,
     availableAddons: [
       Addons(name:"Chia seeds", price: 0.50), 
@@ -194,7 +194,7 @@ class Store extends ChangeNotifier {
     name: "Orange Zest", 
     description: "A creamy and citrusy delight made with fresh orange juice and zest, offering a vibrant and refreshing taste in every bite.", 
     price: 5.29, 
-    imagePath:"lib/assets/fruit/Orange.jpg" , 
+    imagePath:"lib/images/fruit/Orange.jpg" , 
     category: IceCreamsCategory.fruit,
     availableAddons: [
       Addons(name:"White chocolate drizzle", price: 0.50), 
@@ -209,7 +209,7 @@ class Store extends ChangeNotifier {
     name: "Peach Paradise", 
     description: "A smooth and luscious peach ice cream infused with real peach chunks, creating a naturally sweet and juicy experience.", 
     price: 5.29, 
-    imagePath:"lib/assets/fruit/peach.webp" , 
+    imagePath:"lib/images/fruit/peach.webp" , 
     category: IceCreamsCategory.fruit,
     availableAddons: [
       Addons(name:"Fresh peach slices", price: 0.75), 
@@ -224,7 +224,7 @@ class Store extends ChangeNotifier {
     name: "Berry Bliss", 
     description: "A rich and creamy strawberry ice cream made with sun-ripened strawberries, offering a naturally sweet and tangy explosion of flavor.", 
     price: 5.29, 
-    imagePath:"lib/assets/fruit/Strawberry.jpg" , 
+    imagePath:"lib/images/fruit/Strawberry.jpg" , 
     category: IceCreamsCategory.fruit,
     availableAddons: [
       Addons(name:"Fresh strawberries", price: 0.75), 
@@ -240,7 +240,7 @@ class Store extends ChangeNotifier {
     name: "Zesty Lemon", 
     description: " A refreshing and tangy lemon sorbet made with fresh lemon juice and zest, delivering a perfectly balanced sweet and citrusy kick.", 
     price: 4.79, 
-    imagePath:"lib/assets/fruit/lemon.jpeg" , 
+    imagePath:"lib/images/water/lemon.jpeg" , 
     category: IceCreamsCategory.water,
     availableAddons: [
       Addons(name:"Mint leaves", price: 0.50), 
@@ -255,7 +255,7 @@ class Store extends ChangeNotifier {
     name: "Tropical Mango", 
     description: "  A smooth and naturally sweet mango sorbet made from ripe mangoes, offering a creamy texture without dairy. A taste of the tropics in every bite!", 
     price: 4.79, 
-    imagePath:"lib/assets/fruit/mango.jpg" , 
+    imagePath:"lib/images/water/mango.jpg" , 
     category: IceCreamsCategory.water,
     availableAddons: [
       Addons(name:"Fresh mango chunks", price: 0.75), 
@@ -269,7 +269,7 @@ class Store extends ChangeNotifier {
   name: "Berry Fusion", 
   description: "A delightful mix of red fruits—strawberries, raspberries, and blueberries—blended into a vibrant and juicy sorbet bursting with natural berry flavors.", 
   price: 4.79, 
-  imagePath: "lib/assets/water/redfruits.jpeg", 
+  imagePath: "lib/images/water/redFruits.jpg", 
   category: IceCreamsCategory.water,
   availableAddons: [
     Addons(name: "Fresh berries", price: 0.75), 
@@ -283,7 +283,7 @@ IceCreams(
   name: "Strawberry Splash", 
   description: "A light and refreshing strawberry sorbet made with fresh strawberries and a hint of citrus, offering a naturally sweet and tangy experience.", 
   price: 4.79, 
-  imagePath: "lib/assets/water/Strawberry.jpeg", 
+  imagePath: "lib/images/water/Strawberrys.jpg", 
   category: IceCreamsCategory.water,
   availableAddons: [
     Addons(name: "Fresh strawberry slices", price: 0.75), 
@@ -297,7 +297,7 @@ IceCreams(
   name: "watermelon Breeze", 
   description: "A hydrating and delicious watermelon sorbet, made with real watermelon juice for a naturally refreshing and fruity summer treat.", 
   price: 4.79, 
-  imagePath: "lib/assets/water/watermelon.jpeg", 
+  imagePath: "lib/images/water/watermelon.jpeg", 
   category: IceCreamsCategory.water,
   availableAddons: [
     Addons(name: "Fresh watermelon cubes", price: 0.75), 
@@ -313,7 +313,7 @@ IceCreams(
   name: "ChocoNut Delight", 
   description: "A rich chocolate popsicle coated with crunchy almonds and hazelnuts, offering a perfect balance between smooth and crunchy textures.", 
   price: 4.99, 
-  imagePath: "lib/assets/popsicle/chocolate_nuts.jpeg", 
+  imagePath: "lib/images/ice_popsicle/chocolate and nuts.jpeg", 
   category: IceCreamsCategory.popsicle,
   availableAddons: [
     Addons(name: "Extra nut topping", price: 0.75), 
@@ -327,7 +327,7 @@ IceCreams(
   name: "Classic Choco Pop", 
   description: "A smooth and creamy chocolate popsicle made with premium cocoa, perfect for chocolate lovers looking for a rich and indulgent treat.", 
   price: 4.99, 
-  imagePath: "lib/assets/popsicle/chocolate.jpeg", 
+  imagePath: "lib/images/ice_popsicle/chocolate.jpeg", 
   category: IceCreamsCategory.popsicle,
   availableAddons: [
     Addons(name: "Chocolate chips", price: 0.50), 
@@ -341,7 +341,7 @@ IceCreams(
   name: "Zesty Lemon Pop", 
   description: "A refreshing and tangy lemon-flavored popsicle made with fresh lemon juice, offering a cool and citrusy burst of flavor.", 
   price: 4.99, 
-  imagePath: "lib/assets/popsicle/lemon.jpeg", 
+  imagePath: "lib/images/ice_popsicle/lemon.jpg", 
   category: IceCreamsCategory.popsicle,
   availableAddons: [
     Addons(name: "Lemon zest", price: 0.50), 
@@ -355,7 +355,7 @@ IceCreams(
   name: "Tropical Pineapple Pop", 
   description: "A juicy pineapple popsicle made with real pineapple puree, delivering a tropical and refreshing flavor in every bite.", 
   price: 4.99, 
-  imagePath: "lib/assets/popsicle/pineapple.jpeg", 
+  imagePath: "lib/images/ice_popsicle/pineapple .jpeg", 
   category: IceCreamsCategory.popsicle,
   availableAddons: [
     Addons(name: "Fresh pineapple chunks", price: 0.75), 
@@ -369,7 +369,7 @@ IceCreams(
   name: "Sweet Rice Pudding Pop", 
   description: "A creamy and cinnamon-infused rice pudding popsicle, inspired by the traditional arroz con leche, offering a nostalgic and comforting taste.", 
   price: 4.99, 
-  imagePath: "lib/assets/popsicle/rice_pudding.jpeg", 
+  imagePath: "lib/images/ice_popsicle/rice pudding .jpg", 
   category: IceCreamsCategory.popsicle,
   availableAddons: [
     Addons(name: "Extra cinnamon", price: 0.50), 

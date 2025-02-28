@@ -28,14 +28,27 @@ class IcecreamsTile extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(iceCreams.name),
-                      Text('\$' + iceCreams.price.toString()),
-                      Text(iceCreams.description)
+                      Text(
+                        '\$' + iceCreams.price.toString(),
+                        style: TextStyle(
+                          color: Theme.of(context).colorScheme.primary,
+                        ) 
+                        ),
+
+                        SizedBox(height: 10,),
+
+                      Text(
+                        iceCreams.description,
+                        style: TextStyle(
+                          color: Theme.of(context).colorScheme.inversePrimary
+                        ),
+                        )
                     ]
                   )
                 
                 ),
                 //IceCreams Image 
-                Image.asset(iceCreams.imagePath, height: 12,),
+                ClipRRect(child: Image.asset(iceCreams.imagePath, height: 100,)),
               ]
             ),
           ),
