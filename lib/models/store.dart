@@ -53,7 +53,7 @@ class Store extends ChangeNotifier {
     //---------clase que da la informacion del producto------------//
     IceCreams(
     name: "Coffee Rush", 
-    description: " A bold and aromatic ice cream infused with real coffee, delivering a smooth and energizing experience with every bite.", 
+    description: "A bold and aromatic ice cream infused with real coffee, delivering a smooth and energizing experience with every bite.", 
     price: 4.99, 
     imagePath:"lib/images/milk/coffee.webp" , 
     category: IceCreamsCategory.milk,
