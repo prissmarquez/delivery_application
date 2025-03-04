@@ -1,4 +1,3 @@
-import 'package:deliver/components/MyDrawer.dart';
 import 'package:deliver/components/button.dart';
 import 'package:deliver/models/iceCreams(food).dart';
 import 'package:flutter/material.dart';
@@ -90,7 +89,7 @@ class _IcecreamspageState extends State<Icecreamspage> {
                   borderRadius: BorderRadius.circular(8)
               ),
               child: ListView.builder(
-                shrinkWrap: false,
+                shrinkWrap: true,
                 padding: EdgeInsets.zero,
                 itemCount: widget.iceCreams.availableAddons.length,
                 itemBuilder: (context, index) {
