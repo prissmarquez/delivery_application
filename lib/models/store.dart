@@ -38,7 +38,7 @@ class Store extends ChangeNotifier {
     //---------clase que da la informacion del producto------------//
     IceCreams(
     name: "Coco Delight", 
-    description: " A tropical escape in every scoop! Creamy coconut milk ice cream with real coconut flakes for a refreshing and exotic treat.", 
+    description: "A tropical escape in every scoop! Creamy coconut milk ice cream with real coconut flakes for a refreshing and exotic treat.", 
     price: 4.99, 
     imagePath:"lib/images/milk/coconut.jpeg" , 
     category: IceCreamsCategory.milk,
@@ -100,7 +100,7 @@ class Store extends ChangeNotifier {
      //---------clase que da la informacion del producto------------//
     IceCreams(
     name: "Golden Caramel Swirl", 
-    description: " Indulge in the buttery richness of caramel-infused cream ice cream with delicate swirls of golden caramel for the ultimate sweet experience.", 
+    description: "Indulge in the buttery richness of caramel-infused cream ice cream with delicate swirls of golden caramel for the ultimate sweet experience.", 
     price: 5.49, 
     imagePath:"lib/images/cream/Caramel.jpg" , 
     category: IceCreamsCategory.cream,
@@ -253,7 +253,7 @@ class Store extends ChangeNotifier {
      //---------clase que da la informacion del producto------------//
     IceCreams(
     name: "Tropical Mango", 
-    description: "  A smooth and naturally sweet mango sorbet made from ripe mangoes, offering a creamy texture without dairy. A taste of the tropics in every bite!", 
+    description: "A smooth and naturally sweet mango sorbet made from ripe mangoes, offering a creamy texture without dairy. A taste of the tropics in every bite!", 
     price: 4.79, 
     imagePath:"lib/images/water/mango.jpg" , 
     category: IceCreamsCategory.water,
