@@ -120,7 +120,7 @@ class _IcecreamspageState extends State<Icecreamspage> {
          SizedBox(height: 22,),
        
           //botton => add to cart
-          Button(onTap: (){}, text: "add to cart")
+          Button(onTap: (){}, text: "add to caart")
         ],
            ),
      ),
