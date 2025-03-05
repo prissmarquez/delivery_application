@@ -1,6 +1,8 @@
 import 'package:deliver/components/button.dart';
 import 'package:deliver/models/iceCreams(food).dart';
+import 'package:deliver/models/store.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 //this page is for when the user click on the image of the product
 
@@ -23,6 +25,22 @@ class Icecreamspage extends StatefulWidget {
 }
 
 class _IcecreamspageState extends State<Icecreamspage> {
+
+  void addToCart(IceCreams iceCream, Map<Addons, bool> selectedAddons) {
+    //close teh current iceCream page to back to the menu
+    Navigator.pop(context);
+
+    //add the ice cream addon to the cart
+    List<Addons> currentSelectAddons =[];
+    for(Addons addons in iceCream.availableAddons){ 
+      if(widget.selectedAddons[addons] == true){
+        currentSelectAddons.add(addons);
+      }
+     }
+     // add to cart
+     context.read<Store>().addToCart(iceCream, currentSelectAddons);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -119,13 +137,24 @@ class _IcecreamspageState extends State<Icecreamspage> {
             ),
           ),
           
-         SizedBox(height: 22,),
+         const SizedBox(height: 22,),
        
           //botton => add to cart
-          Button(onTap: (){}, text: "add to cart"),
+          Button(
+            onTap: () => addToCart(widget.iceCreams, widget.selectedAddons), 
+            text: "add to cart"
+            ),
 
+            const SizedBox(
+              height: 20,
+            )
           
-          //back button
+          ],
+           ),
+     ),
+    ),
+
+     //back button
           SafeArea(
             child: Opacity(
               opacity: 0.5,
@@ -143,10 +172,7 @@ class _IcecreamspageState extends State<Icecreamspage> {
               ),
             ),
           )
-        ],
-           ),
-     ),
-    ),
+
       ]
     );
   }
