@@ -58,7 +58,7 @@ with SingleTickerProviderStateMixin{
           //get individual IceCreams 
           final iceCreams = categoryMenu[index];
 
-          //return food tile UI
+          //return food tile UI, muestra los prdocutos en el body 
           return IcecreamsTile(
             iceCreams: iceCreams, 
             onTap:() =>  Navigator.push (context, MaterialPageRoute(builder: (context) => Icecreamspage(iceCreams: iceCreams))),

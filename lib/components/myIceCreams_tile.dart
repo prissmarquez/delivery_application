@@ -18,7 +18,7 @@ class IcecreamsTile extends StatelessWidget {
         GestureDetector(
           onTap: onTap,
           child: Padding(
-            padding: const EdgeInsets.all(15.0),
+            padding: const EdgeInsets.only(left: 18, top: 5, right: 8, bottom: 5),
             child: Row(
               children: [
             
@@ -51,7 +51,7 @@ class IcecreamsTile extends StatelessWidget {
                 SizedBox(width: 20,),
                 //IceCreams Image 
                 ClipRRect(
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(15),
                   child: Image.asset(iceCreams.imagePath, height: 160, width: 150,)
                   ),
               ]

@@ -1,5 +1,8 @@
+import 'package:collection/collection.dart';
+import 'package:deliver/models/cart.dart';
 import 'package:deliver/models/iceCreams(food).dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 
 class Store extends ChangeNotifier {
   final List<IceCreams> _menu = [
@@ -389,11 +392,48 @@ IceCreams(
 
   */
 
+  //use cart
+  final List<Cart> _cart = [];
+
   //add to cart 
+  void addToCart(IceCreams iceCreams, List<Addons> selectedAddons) {
+    //if there is a cart item already with the same IceCream and selected Addons
+    Cart? cartItem = _cart.firstWhereOrNull((item) {
+      bool isSameIceCream = item.iceCreams == iceCreams;
+
+      bool isSameAddons = 
+        ListEquality().equals(item.selectedAddons, selectedAddons);
+
+      return isSameIceCream && isSameAddons;
+    });
+    
+    //increse quantity
+    if (cartItem != null) {
+      cartItem.quantity++;
+    }
+
+    else{
+      _cart.add(Cart(iceCreams: iceCreams, selectedAddons: selectedAddons, ));
+    notifyListeners();
+   }
+  }
 
   //remove from cart
+  void removeFromCart(Cart cartItem) {
+    int cartindex = _cart.indexOf(cartItem);
 
+    if(cartindex != -1){
+
+      if(_cart[cartindex].quantity > 1){
+        _cart[cartindex].quantity--;
+      }
+      else{
+        _cart.removeAt(cartindex);
+      }
+    }
+  }
   //get the total price of the cart
+
 
   //get numbers of item in the cart
 

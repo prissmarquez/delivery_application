@@ -25,13 +25,16 @@ class Icecreamspage extends StatefulWidget {
 class _IcecreamspageState extends State<Icecreamspage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Stack(
+      children: [
+        //UI Scaffold
+        Scaffold(
       appBar:AppBar(),
      body: SingleChildScrollView(
        child: Column(
         children: [
           //image
-          Image.asset(widget.iceCreams.imagePath, height: 300,),
+          Image.asset(widget.iceCreams.imagePath, ),
        
           Padding(
             padding: const EdgeInsets.only(left: 25, right: 25, top: 13),
@@ -119,10 +122,33 @@ class _IcecreamspageState extends State<Icecreamspage> {
          SizedBox(height: 22,),
        
           //botton => add to cart
-          Button(onTap: (){}, text: "add to cart")
+          Button(onTap: (){}, text: "add to cart"),
+
+          SizedBox(height: 50,),
+          
+          //back button
+          SafeArea(
+            child: Opacity(
+              opacity: 0.5,
+              child: Container(
+                margin: EdgeInsets.only(left:25),
+                decoration:
+                BoxDecoration(
+                  color: Theme.of(context).colorScheme.secondary,
+                  shape: BoxShape.circle
+                  ),
+                child: IconButton(
+                  onPressed: () => Navigator.pop(context), 
+                  icon: Icon(Icons.arrow_back_ios),
+                )
+              ),
+            ),
+          )
         ],
            ),
      ),
+    ),
+      ]
     );
   }
 }
