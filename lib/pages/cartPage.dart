@@ -9,8 +9,26 @@ class Cartpage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<Store>(
       builder: (context, store, child) {
-        return Scaffold(
+        //cart
+        final userCart = store.cart;
 
+        return Scaffold(
+          appBar: AppBar(
+            title: const Text('Cart'),
+            backgroundColor: Colors.transparent,
+            foregroundColor: Theme.of(context).colorScheme.inversePrimary,
+          ),
+          body: Column(
+            children: [
+              Expanded(
+                child: ListView.builder(
+                  itemBuilder: (context, index) => ListTile(
+                    title: Text(userCart[index].iceCreams.name),
+                  )
+                  )
+                )
+            ]
+          ),
         );
       }
     );

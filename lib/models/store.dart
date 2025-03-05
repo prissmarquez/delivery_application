@@ -385,6 +385,7 @@ IceCreams(
   
   //G E T T E R S
   List<IceCreams> get menu => _menu;
+  List<Cart> get cart => _cart;
 
   /* 
 
@@ -404,7 +405,7 @@ IceCreams(
 
       //check if the list of selected addons are the same 
       bool isSameAddons = 
-        ListEquality().equals(item.selectedAddons, selectedAddons);
+        const ListEquality().equals(item.selectedAddons, selectedAddons);
 
       return isSameIceCream && isSameAddons;
     });

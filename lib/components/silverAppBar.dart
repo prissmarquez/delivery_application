@@ -1,3 +1,4 @@
+import 'package:deliver/pages/cartPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -20,12 +21,14 @@ class sliverappbar extends StatelessWidget {
       actions: [
         //cart button 
         IconButton(
-        onPressed: () {}, 
-        icon: Icon(Icons.shopping_cart))
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context)=> const Cartpage()));
+        }, 
+        icon: const Icon(Icons.shopping_cart))
       ],
       backgroundColor: Theme.of(context).colorScheme.background,
       foregroundColor: Theme.of(context).colorScheme.inversePrimary,
-      title: Text("Sunset dinner"),
+      title: const Text("IceCreams"),
       flexibleSpace: FlexibleSpaceBar(
         background: Padding(
           padding: const EdgeInsets.only(bottom: 50.0),
