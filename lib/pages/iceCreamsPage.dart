@@ -29,7 +29,7 @@ class _IcecreamspageState extends State<Icecreamspage> {
       children: [
         //UI Scaffold
         Scaffold(
-      appBar:AppBar(),
+      
      body: SingleChildScrollView(
        child: Column(
         children: [
@@ -124,14 +124,13 @@ class _IcecreamspageState extends State<Icecreamspage> {
           //botton => add to cart
           Button(onTap: (){}, text: "add to cart"),
 
-          SizedBox(height: 50,),
           
           //back button
           SafeArea(
             child: Opacity(
               opacity: 0.5,
               child: Container(
-                margin: EdgeInsets.only(left:25),
+               
                 decoration:
                 BoxDecoration(
                   color: Theme.of(context).colorScheme.secondary,
