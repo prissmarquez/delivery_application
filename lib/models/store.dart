@@ -399,8 +399,10 @@ IceCreams(
   void addToCart(IceCreams iceCreams, List<Addons> selectedAddons) {
     //if there is a cart item already with the same IceCream and selected Addons
     Cart? cartItem = _cart.firstWhereOrNull((item) {
+      //check if the IceCream item is the same
       bool isSameIceCream = item.iceCreams == iceCreams;
 
+      //check if the list of selected addons are the same 
       bool isSameAddons = 
         ListEquality().equals(item.selectedAddons, selectedAddons);
 
@@ -412,10 +414,15 @@ IceCreams(
       cartItem.quantity++;
     }
 
+    //otherviwe and a new cart iten to the cart
     else{
-      _cart.add(Cart(iceCreams: iceCreams, selectedAddons: selectedAddons, ));
+      _cart.add(
+        Cart(
+          iceCreams: iceCreams, 
+          selectedAddons: selectedAddons, 
+          ));
+      }
     notifyListeners();
-   }
   }
 
   //remove from cart
@@ -431,13 +438,40 @@ IceCreams(
         _cart.removeAt(cartindex);
       }
     }
+     notifyListeners();
   }
+
   //get the total price of the cart
+  double getTotalPrice (){
+    double total = 0.0;
+
+     for (Cart cartItem in _cart) {
+      double itemTotal = cartItem.iceCreams.price;
+
+      for(Addons addons in cartItem.selectedAddons){
+        itemTotal += addons.price;
+      }
+      total += itemTotal * cartItem.quantity;
+
+    }
+    return total;
+  }
 
 
   //get numbers of item in the cart
+  int getTotalItem  (){
+    int totalItem = 0;
+    for (Cart cartItem in _cart) {
+      totalItem += cartItem.quantity;
+    }
+    return totalItem;
+  }
 
   //clean the cart 
+  void cleanCart(){
+    _cart.clear();
+    notifyListeners();
+  }
 
   /*
 
