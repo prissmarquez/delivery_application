@@ -22,9 +22,14 @@ class Cartpage extends StatelessWidget {
             children: [
               Expanded(
                 child: ListView.builder(
-                  itemBuilder: (context, index) => ListTile(
+                  itemCount: userCart.length,
+                  itemBuilder: (context, index) { 
+
+                    // return 
+                    return ListTile(
                     title: Text(userCart[index].iceCreams.name),
-                  )
+                  );
+                  }
                   )
                 )
             ]
