@@ -159,7 +159,8 @@ class _IcecreamspageState extends State<Icecreamspage> {
             child: Opacity(
               opacity: 0.5,
               child: Container(
-               
+                margin: const EdgeInsets.all(10),
+                padding: EdgeInsets.only(left: 12),
                 decoration:
                 BoxDecoration(
                   color: Theme.of(context).colorScheme.secondary,

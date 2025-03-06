@@ -1,3 +1,4 @@
+import 'package:deliver/components/cartItem.dart';
 import 'package:deliver/models/store.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -24,11 +25,11 @@ class Cartpage extends StatelessWidget {
                 child: ListView.builder(
                   itemCount: userCart.length,
                   itemBuilder: (context, index) { 
+                    //get indivuadl cart item 
+                    final cartItem = userCart[index];
 
-                    // return 
-                    return ListTile(
-                    title: Text(userCart[index].iceCreams.name),
-                  );
+                    // return cart tile
+                    return MyCartitem(cartItem: cartItem);
                   }
                   )
                 )
