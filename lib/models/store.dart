@@ -1,8 +1,10 @@
 import 'package:collection/collection.dart';
+import 'package:deliver/components/receipt.dart';
 import 'package:deliver/models/cart.dart';
 import 'package:deliver/models/iceCreams(food).dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class Store extends ChangeNotifier {
   final List<IceCreams> _menu = [
@@ -439,14 +441,14 @@ IceCreams(
         _cart.removeAt(cartindex);
       }
     }
-     notifyListeners();
+      notifyListeners();
   }
 
   //get the total price of the cart
   double getTotalPrice (){
     double total = 0.0;
 
-     for (Cart cartItem in _cart) {
+      for (Cart cartItem in _cart) {
       double itemTotal = cartItem.iceCreams.price;
 
       for(Addons addons in cartItem.selectedAddons){
@@ -481,8 +483,39 @@ IceCreams(
   */
 
   //generate a receipt 
+  String generateReceipt(){
+    final receipt = StringBuffer();
+    receipt.writeln('Here your receipt');
+    receipt.writeln('');
+
+    String formattedDate = DateFormat("yyyy-MM-dd").format(DateTime.now());
+    receipt.writeln(formattedDate);
+    receipt.writeln();
+    receipt.writeln("------------------");
+
+    for(final cartItem in _cart){
+      receipt.writeln(
+        '${cartItem.iceCreams.name} x ${cartItem.quantity} - ${_formatPrice(cartItem.iceCreams.price)}');
+        if(cartItem.selectedAddons.isEmpty){
+          receipt.writeln("Addons : ${_formatAddons(cartItem.selectedAddons)}");
+        }
+        receipt.writeln();
+    }
+    receipt.writeln("------------------");
+    receipt.writeln("");
+    receipt.writeln("Total Items: ${getTotalItem()}");
+    receipt.writeln("Total Items: ${_formatPrice(getTotalPrice())}");
+
+    return receipt.toString();
+  }
 
   //format doubel value into money
+  String _formatPrice(double price){
+    return price.toStringAsFixed(2);
+  }
 
   //format list of addoms into string
+  String _formatAddons(List<Addons> addons){
+    return addons.map((addons) => "${addons.name} (${_formatPrice(addons.price)})").join(".");
+  }
 }
