@@ -1,11 +1,14 @@
-import 'package:deliver/auth/login_or_register.dart';
+import 'package:deliver/services/auth/login_or_register.dart';
+import 'package:deliver/firebase_options.dart';
 import 'package:deliver/models/store.dart';
 import 'package:deliver/themes/themeProvider.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-void main() {
- WidgetsFlutterBinding.ensureInitialized();
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options:DefaultFirebaseOptions.currentPlatform);
 
   runApp(
     //these provider
