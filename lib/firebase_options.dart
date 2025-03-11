@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -33,10 +30,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.macOS:
         return macos;
       case TargetPlatform.windows:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for windows - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return windows;
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -66,4 +60,25 @@ class DefaultFirebaseOptions {
     storageBucket: 'icecreams-d783b.firebasestorage.app',
     iosBundleId: 'com.example.deliver',
   );
+
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyBDUl_d16vjiUEDBD4ev14vyXRgFUsN0O0',
+    appId: '1:1069675703211:web:e10dd681e89785639dc0ee',
+    messagingSenderId: '1069675703211',
+    projectId: 'icecreams-d783b',
+    authDomain: 'icecreams-d783b.firebaseapp.com',
+    storageBucket: 'icecreams-d783b.firebasestorage.app',
+    measurementId: 'G-NLM251XZJ4',
+  );
+
+  static const FirebaseOptions windows = FirebaseOptions(
+    apiKey: 'AIzaSyBDUl_d16vjiUEDBD4ev14vyXRgFUsN0O0',
+    appId: '1:1069675703211:web:0f1d0c204b81c5e79dc0ee',
+    messagingSenderId: '1069675703211',
+    projectId: 'icecreams-d783b',
+    authDomain: 'icecreams-d783b.firebaseapp.com',
+    storageBucket: 'icecreams-d783b.firebasestorage.app',
+    measurementId: 'G-JKTJJL5RGR',
+  );
+
 }

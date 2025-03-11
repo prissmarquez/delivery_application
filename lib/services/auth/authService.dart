@@ -21,13 +21,30 @@ class Authservice {
         password: password
         );
         return userCredential;
-    } on FirebaseAuthException catch (e) {
-      
-    }
-   
+        } 
+        on FirebaseAuthException catch (e) {
+          throw Exception(e.code);
+          }
   }
 
   //sing  up 
+  Future<UserCredential> signUpWithEmailPassword(String email, password) async {
+    try {
+      //sign user in
+      UserCredential userCredential = 
+      await _firebaseAuth.createUserWithEmailAndPassword(
+        email: email, 
+        password: password
+        );
+        return userCredential;
+        } 
+        on FirebaseAuthException catch (e) {
+          throw Exception(e.code);
+          }
+  }
 
   //sign out 
+  Future<void> signOut() async {
+    return await _firebaseAuth.signOut();
+  }
 }

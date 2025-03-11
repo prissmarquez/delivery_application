@@ -1,13 +1,14 @@
 import 'package:deliver/components/button.dart';
 import 'package:deliver/components/textField.dart';
 import 'package:deliver/pages/homePage.dart';
+import 'package:deliver/services/auth/authService.dart';
 import 'package:flutter/material.dart';
 
 class Loginpage extends StatefulWidget {
   final void Function()? onTap;
- 
 
-   const Loginpage({
+
+  const Loginpage({
     super.key,
     required this.onTap
     });
@@ -17,12 +18,33 @@ class Loginpage extends StatefulWidget {
 }
 
 class _LoginpageState extends State<Loginpage> {
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
+  final  emailController = TextEditingController();
+  final  passwordController = TextEditingController();
 
-  void login(){
-    Navigator.push(context, MaterialPageRoute(builder: (context) => Homepage())); 
+  //Login method 
+  Future<void> login() async {
+    //get instance of uath service
+    final _authService = Authservice();
+
+    //try sign up
+    try{
+      await _authService.signInWithEmailPassword(
+        emailController.text
+        ,passwordController.text
+        );
   }
+
+  //display any error
+  catch(e){
+    showDialog(
+      // ignore: use_build_context_synchronously
+      context: context, 
+      builder: (context) => AlertDialog(
+        title: Text(e.toString()),
+      )
+      );
+  }
+}
 
 
   @override
@@ -41,7 +63,7 @@ class _LoginpageState extends State<Loginpage> {
               ),
 
               const SizedBox(height: 20,),
-           
+        
             //message, app slogan
             Text(
               "Best flavors in word",
@@ -54,7 +76,7 @@ class _LoginpageState extends State<Loginpage> {
             const SizedBox(height: 20,),
         
             //email textfield
-           Textfield(
+            Textfield(
             controller: emailController, 
             hintText: "email", 
             obscureText: false,

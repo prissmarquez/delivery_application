@@ -1,4 +1,5 @@
-import 'package:deliver/services/auth/login_or_register.dart';
+import 'package:deliver/services/auth/authGate.dart';
+
 import 'package:deliver/firebase_options.dart';
 import 'package:deliver/models/store.dart';
 import 'package:deliver/themes/themeProvider.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const LoginOrRegister(),
+      home: Authgate(),
       theme: Provider.of<Themeprovider>(context).themeData
     );
   }

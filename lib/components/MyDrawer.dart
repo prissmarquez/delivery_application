@@ -1,9 +1,15 @@
 import 'package:deliver/components/drawerTile.dart';
 import 'package:deliver/pages/settingsPage.dart';
+import 'package:deliver/services/auth/authService.dart';
 import 'package:flutter/material.dart';
 
 class Mydrawer extends StatelessWidget {
   const Mydrawer({super.key});
+
+  void logout(){
+    final authservice = Authservice();
+    authservice.signOut();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,29 +37,32 @@ class Mydrawer extends StatelessWidget {
           //home list tile
           Drawertile(
             icon: Icons.home,
-             text: "H O M E",
-             onTap: () => Navigator.pop(context),
-             ),
+              text: "H O M E",
+              onTap: () => Navigator.pop(context),
+              ),
           //settings list tile
-           Drawertile(
+            Drawertile(
             icon: Icons.settings,
-             text: "S E T T I N G S",
-             onTap: () {
-               Navigator.pop(context);
-               Navigator.push(
+              text: "S E T T I N G S",
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) => Settingspage(),
                 )
-               );
-             } ,
-             ),
+                );
+              } ,
+              ),
           //logout list tile
           Drawertile(
             icon: Icons.logout,
-             text: "L O G O U T",
-             onTap: () {} ,
-             )
+              text: "L O G O U T",
+              onTap: () {
+                logout();
+                Navigator.pop(context);
+              } ,
+              )
         ]
       )
     );

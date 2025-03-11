@@ -1,3 +1,5 @@
+
+import 'package:deliver/services/auth/authService.dart';
 import 'package:flutter/material.dart';
 import 'package:deliver/components/button.dart';
 import 'package:deliver/components/textField.dart';
@@ -15,10 +17,47 @@ class Registerpage extends StatefulWidget {
 }
 
 class _RegisterpageState extends State<Registerpage> {
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
-  final TextEditingController confirmPasswordController = TextEditingController();
+  //text editing controllers
+  final  emailController = TextEditingController();
+  final  passwordController = TextEditingController();
+  final confirmPasswordController = TextEditingController();
 
+  void register() async{
+    //get the auth service 
+    final _authService = Authservice();
+
+    //check if paswword match
+    if (passwordController.text == confirmPasswordController.text){
+      //register the user
+      try{
+        await _authService.signUpWithEmailPassword(
+          emailController.text, 
+          passwordController.text
+          );
+      }
+
+      //display any error
+      catch (e){
+        showDialog(
+          context: context, 
+          builder: (context) => AlertDialog(
+            title: Text(e.toString()),
+          )
+          );
+      } 
+    }
+
+    //if passwords dont match -> show error
+    else{
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text("Passwords don't match"),
+        )
+      );
+    }
+
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +76,6 @@ class _RegisterpageState extends State<Registerpage> {
               ),
 
               const SizedBox(height: 20,),
-           
 
             //message, app slogan
             Text(
@@ -79,7 +117,7 @@ class _RegisterpageState extends State<Registerpage> {
 
             //sign in button
             Button(
-              onTap: (){}, 
+              onTap: register,
               text: "Sign Up"
               ),
         
