@@ -20,7 +20,7 @@ class _DeliveryprogresspageState extends State<Deliveryprogresspage> {
     super.initState();
 
     //if we get to this page, submit orde to firestore db
-    String receipt = context.read<Store>().displayCartRecipt();
+    String receipt = context.read<Store>().generateReceipt();
     db.saveOrderToDatebase(receipt);
   }
 
