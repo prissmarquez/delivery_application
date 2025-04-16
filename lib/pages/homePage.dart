@@ -74,8 +74,8 @@ with SingleTickerProviderStateMixin{
       backgroundColor: Theme.of(context).colorScheme.background,
       drawer: const Mydrawer(),
       body: NestedScrollView(
-       headerSliverBuilder: (context, innerBoxIsScrolled) => [
-       sliverappbar(
+        headerSliverBuilder: (context, innerBoxIsScrolled) => [
+        sliverappbar(
         title: Tabbar(tabController: _tabController),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
@@ -86,22 +86,22 @@ with SingleTickerProviderStateMixin{
               color: Theme.of(context).colorScheme.secondary
             ),
            //my current location 
-           Mycurrentlocation(),
+            Mycurrentlocation(),
 
            //description box
-           Descriptionbox(),
+            Descriptionbox(),
           ]
         )
         )
       ] ,
 
       //---------------Esto va abajo del tabBar es nuestro body-------------//
-     body: Consumer<Store>(
+      body: Consumer<Store>(
       builder: (context, store, child) => TabBarView(
       controller: _tabController,
       children: getFoodInThisCategory(store.menu)
       )
-     )
+      )
       ), 
     );
   }
